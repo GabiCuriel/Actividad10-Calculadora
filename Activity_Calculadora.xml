@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText_Numero1"
+        android:layout_width="208dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="ingresa un numero"
+        android:inputType="text"
+        android:singleLine="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Numero2" />
+
+    <EditText
+        android:id="@+id/editText_Numero2"
+        android:layout_width="208dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="ingresa un numero"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Numero1" />
+
+    <TextView
+        android:id="@+id/textView_Resultado"
+        android:layout_width="161dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="224dp"
+        android:fontFamily="serif"
+        android:text="Resultado:"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Numero1"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
+        android:text="Numero 1:"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Numero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
+        android:text="Numero 2:"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Numero2" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Multiplicacion"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="136dp"
+        android:background="@android:color/background_light"
+        android:onClick="multiplicacionOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_multiplicacion" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Modulo"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="136dp"
+        android:background="@android:color/background_light"
+        android:onClick="moduloOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_Division"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_Multiplicacion"
+        app:srcCompat="@mipmap/ic_modulo" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Division"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="136dp"
+        android:background="@android:color/background_light"
+        android:onClick="divisionOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/ic_division" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Resta"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="44dp"
+        android:background="@android:color/background_light"
+        android:onClick="restaOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/ic_resta" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Suma"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="44dp"
+        android:background="@android:color/background_light"
+        android:onClick="sumaOnclick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_suma" />
+
+</android.support.constraint.ConstraintLayout>
